@@ -85,6 +85,12 @@ build CMakeFiles/EasyBMP.dir/EasyBMP.cpp.o: CXX_COMPILER__EasyBMP_Debug /Users/b
   OBJECT_DIR = CMakeFiles/EasyBMP.dir
   OBJECT_FILE_DIR = CMakeFiles/EasyBMP.dir
 
+build CMakeFiles/EasyBMP.dir/Solution.cpp.o: CXX_COMPILER__EasyBMP_Debug /Users/brayanvizcaino/Desktop/CS$ 415/Project3/Solution.cpp || cmake_object_order_depends_target_EasyBMP
+  DEP_FILE = CMakeFiles/EasyBMP.dir/Solution.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics -std=gnu++20
+  OBJECT_DIR = CMakeFiles/EasyBMP.dir
+  OBJECT_FILE_DIR = CMakeFiles/EasyBMP.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target EasyBMP
@@ -93,7 +99,7 @@ build CMakeFiles/EasyBMP.dir/EasyBMP.cpp.o: CXX_COMPILER__EasyBMP_Debug /Users/b
 #############################################
 # Link the static library libEasyBMP.a
 
-build libEasyBMP.a: CXX_STATIC_LIBRARY_LINKER__EasyBMP_Debug CMakeFiles/EasyBMP.dir/EasyBMP.cpp.o
+build libEasyBMP.a: CXX_STATIC_LIBRARY_LINKER__EasyBMP_Debug CMakeFiles/EasyBMP.dir/EasyBMP.cpp.o CMakeFiles/EasyBMP.dir/Solution.cpp.o
   ARCH_FLAGS = -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/EasyBMP.dir
