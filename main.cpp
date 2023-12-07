@@ -34,8 +34,9 @@ int main(int argc, char* argv[]) {
     // Make one specific pixel red
     Vertex vertex;
     Vertex vertexS(0, 0);
-    Vertex vertexT(639, 425);
-    vertex.breadthFirstSearch(Input, vertexS, vertexT);
+    Vertex vertexT(639, 100);
+
+    vertex.bestFirstSearch(Input, vertexS, vertexT);
 
     // Create a grayscale color table if necessary
     if (Input.TellBitDepth() < 16) {
@@ -49,6 +50,7 @@ int main(int argc, char* argv[]) {
 
     // Write the output file
     Input.WriteToFile(argv[2]);
+
 
     return 0;
 }
