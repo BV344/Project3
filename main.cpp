@@ -30,14 +30,13 @@ int main(int argc, char* argv[]) {
         }
     }
     //This is for testing purposes and Find out the Coordinate System
-    /*
+
     // Make one specific pixel red
-    int redPixelX = 639;
-    int redPixelY = 425;
-    Input(redPixelX, redPixelY)->Red = 255;
-    Input(redPixelX, redPixelY)->Green = 0;
-    Input(redPixelX, redPixelY)->Blue = 0;
-    */
+    Vertex vertex;
+    Vertex vertexS(0, 0);
+    Vertex vertexT(639, 425);
+    vertex.breadthFirstSearch(Input, vertexS, vertexT);
+
     // Create a grayscale color table if necessary
     if (Input.TellBitDepth() < 16) {
         CreateGrayscaleColorTable(Input);
@@ -47,7 +46,6 @@ int main(int argc, char* argv[]) {
 //    cout << "File info:" << endl;
 //    cout << Input.TellWidth() << " x " << Input.TellHeight()
 //         << " at " << Input.TellBitDepth() << " bpp" << endl;
-
 
 
     // Write the output file

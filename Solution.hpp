@@ -1,14 +1,25 @@
 #ifndef PROJECT3_SOLUTION_HPP
 #define PROJECT3_SOLUTION_HPP
 
+#include <iostream>
+#include <vector>
+#include <queue>
 #include "EasyBMP.h"
 
 using namespace std;
 
-class Solution {
+class Vertex {
 public:
-    void breadthFirstSearch(BMP& Image, int s_width, int s_height, int t_width, int t_height);
-    void bestFirstSearch(BMP& Image, int s_width, int s_height, int t_width, int t_height);
+    Vertex();
+    ~Vertex();
+    Vertex(int width, int height);
+
+    void breadthFirstSearch(BMP& Image, Vertex s, Vertex t);
+    void bestFirstSearch(BMP& Image, Vertex s, Vertex t);
+
+private:
+    int width;
+    int height;
 };
 
 #endif //PROJECT3_SOLUTION_HPP
