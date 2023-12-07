@@ -42,11 +42,10 @@ int main(int argc, char* argv[]) {
         CreateGrayscaleColorTable(Input);
     }
 
-//    This tells you the Input File Info:
+////    This tells you the Input File Info:
 //    cout << "File info:" << endl;
 //    cout << Input.TellWidth() << " x " << Input.TellHeight()
 //         << " at " << Input.TellBitDepth() << " bpp" << endl;
-
 
     // Write the output file
     Input.WriteToFile(argv[2]);

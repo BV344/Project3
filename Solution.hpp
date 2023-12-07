@@ -14,6 +14,8 @@ public:
     ~Vertex();
     Vertex(int width, int height);
 
+    vector<Vertex> GetNeighbors(int maxWidth, int maxHeight, BMP& Image) const;
+
     void breadthFirstSearch(BMP& Image, Vertex s, Vertex t);
     void bestFirstSearch(BMP& Image, Vertex s, Vertex t);
 
