@@ -99,7 +99,6 @@ void Vertex::bestFirstSearch(BMP &Image, Vertex s, Vertex t) {
                 Image(v.width, v.height)->Green = 255;
                 Image(v.width, v.height)->Blue = 0;
 
-                int h_v = v.heuristic(v, t);
 
                 distance[v.width][v.height] = distance[u.width][u.height] + 1;
                 prev[v.width][v.height] = u;
@@ -145,9 +144,9 @@ vector<Vertex> Vertex::GetNeighbors(int maxWidth, int maxHeight, BMP &Image) con
     return neighbors;
 }
 
-int Vertex::heuristic(const Vertex& u, const Vertex& t) const {
-    // This function calculates the heuristic value h[u] = |p1 – t1| + |p2 – t2|
-    return abs(u.width - t.width) + abs(u.height - t.height);
+int Vertex::nearestVertex(const Vertex& s, const Vertex& t) const {
+    //This function finds heuristic value which is the closest value to target.
+    return abs(s.width - t.width) + abs(s.height - t.height);
 }
 
 
