@@ -5,6 +5,7 @@
 #include <vector>
 #include <queue>
 #include <cmath>
+#include <string>
 #include "EasyBMP.h"
 
 using namespace std;

@@ -134,7 +134,7 @@ vector<Vertex> Vertex::GetNeighbors(int maxWidth, int maxHeight, BMP &Image) con
 
             if (nx >= 0 && nx < maxWidth && ny >= 0 && ny < maxHeight) {
                 // Add the neighbor if it is within the bounds of the image and satisfies the RGB constraint
-                if (Image(nx, ny)->Red > 100 || Image(nx, ny)->Green > 100 || Image(nx, ny)->Blue > 100) {
+                if (Image(nx, ny)->Red > 120 || Image(nx, ny)->Green > 120 || Image(nx, ny)->Blue > 120) {
                     neighbors.emplace_back(nx, ny);//Adds new Vertex in the 'neighbors' Variable
                 }
             }
